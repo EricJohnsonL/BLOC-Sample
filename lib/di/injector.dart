@@ -2,7 +2,7 @@ import 'package:get_it/get_it.dart';
 import 'package:dio/dio.dart';
 import 'package:logger/logger.dart';
 import 'package:movies/base/parameter_interceptor.dart';
-import 'package:movies/di/modules/movie_module.dart';
+import 'modules.dart';
 
 import '../base/credentials.dart';
 

@@ -12,12 +12,9 @@ class MovieInteractor extends MovieUseCase {
 
   @override
   Future<List<Movie>> getNowPlayingMovies(int page) {
-    return movieRepository.getNowPlayingMovies(page).then(
-      (value) async {
-        return Future.value(
+    return movieRepository.getNowPlayingMovies(page).then((value) =>
+        Future.value(
             (value.results?.map((e) => MovieMapper.mapMovie(e)) ?? List.empty())
-                .toList());
-      },
-    );
+                .toList()));
   }
 }
